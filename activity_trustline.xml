@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:theme="@style/ThemeOverlay.Xrminev6.FullscreenContainer"
+    tools:context=".trustline"
+    >
+
+    <ImageView
+        android:id="@+id/img_xrmine_title2"
+        android:layout_width="412dp"
+        android:layout_height="121dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/todo"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/img_xrmine_title_foreground" />
+
+    <EditText
+        android:id="@+id/num_xrp_balance2"
+        android:layout_width="118dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/xrp_balancev1"
+        android:inputType="number"
+        android:textColor="#E1434343"
+        android:textColorHint="#E1434343"
+        app:layout_constraintBottom_toTopOf="@+id/obj_divider_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_xrmine_title2"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/txt_wallet_address"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/wallet_addressv2"
+        android:inputType="textPersonName"
+        android:textColor="#E1434343"
+        android:textColorHint="#E1434343"
+        app:layout_constraintBottom_toTopOf="@+id/obj_divider_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/num_xrp_balance2"
+        app:layout_constraintTop_toBottomOf="@+id/img_xrmine_title2"
+        android:autofillHints="" />
+
+    <View
+        android:id="@+id/obj_divider_header"
+        android:layout_width="409dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="56dp"
+        android:background="?android:attr/listDivider"
+        android:foreground="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_xrmine_title2"
+        tools:ignore="MissingConstraints,UnusedAttribute"
+        tools:targetApi="m" />
+
+    <androidx.core.widget.NestedScrollView
+
+        android:id="@+id/obj_scroll_tkn"
+        android:layout_width="410dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/obj_divider_header"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarAlwaysDrawHorizontalTrack="true"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarSize="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/txt_tkn_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:ems="10"
+                android:inputType="none"
+                android:text="@string/xrminev5"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_tkn_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/obj_divider_tkn_footer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.162"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_tkn_name"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@mipmap/ic_launcher_foreground"
+                android:contentDescription="@string/todo8"
+                tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/btn_tkn_mine"
+                android:layout_width="164dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/mine_node"
+                app:layout_constraintBottom_toTopOf="@+id/obj_divider_tkn_footer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.211"
+                app:layout_constraintStart_toEndOf="@+id/img_tkn_logo"
+                app:layout_constraintTop_toBottomOf="@+id/btn_tkn_whitepaper"
+                app:layout_constraintVertical_bias="0.08" />
+
+            <Button
+                android:id="@+id/btn_tkn_whitepaper"
+                android:layout_width="164dp"
+                android:layout_height="51dp"
+                android:text="@string/whitepaper"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.211"
+                app:layout_constraintStart_toEndOf="@+id/img_tkn_logo"
+                app:layout_constraintTop_toBottomOf="@+id/txt_tkn_name" />
+
+            <View
+                android:id="@+id/obj_divider_tkn_footer"
+                android:layout_width="407dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="68dp"
+                android:background="?android:attr/listDivider"
+                android:foreground="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_tkn_whitepaper"
+                app:layout_constraintVertical_bias="0.002"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/txt_tkn2_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:text="@string/onxrp1"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/obj_divider_tkn_footer"
+                tools:ignore="TextViewEdits" />
+
+            <ImageView
+                android:id="@+id/img_tkn2_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/obj_divider_tnk2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.162"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_tkn2_name"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@mipmap/img_onxrp_foreground"
+                tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/btn_tkn2_whitepaper"
+                android:layout_width="164dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/tkn_whitepaper"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.027"
+                app:layout_constraintStart_toEndOf="@+id/img_tkn2_logo"
+                app:layout_constraintTop_toBottomOf="@+id/txt_tkn2_name" />
+
+            <Button
+                android:id="@+id/btn_tkn2_trustline"
+                android:layout_width="164dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/tkn_trustline"
+                app:layout_constraintBottom_toTopOf="@+id/obj_divider_tnk2"
+                app:layout_constraintEnd_toEndOf="@+id/btn_tkn2_whitepaper"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/btn_tkn2_whitepaper"
+                app:layout_constraintTop_toBottomOf="@+id/btn_tkn2_whitepaper"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <View
+                android:id="@+id/obj_divider_tnk2"
+                android:layout_width="407dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="68dp"
+                android:background="?android:attr/listDivider"
+                android:foreground="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_tkn2_whitepaper"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/txt_tkn3_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:text="@string/xspectar"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/obj_divider_tnk2"
+                tools:ignore="TextViewEdits" />
+
+            <Button
+                android:id="@+id/btn_tkn3_whitepaper"
+                android:layout_width="164dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/tkn2_whitepaper"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.23"
+                app:layout_constraintStart_toEndOf="@+id/img_tkn3_logo"
+                app:layout_constraintTop_toBottomOf="@+id/txt_tkn3_name" />
+
+            <Button
+                android:id="@+id/btn_tkn3_trustline"
+                android:layout_width="164dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/tkn_set_trustline"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/btn_tkn3_whitepaper"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/btn_tkn3_whitepaper"
+                app:layout_constraintTop_toBottomOf="@+id/btn_tkn3_whitepaper"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/img_tkn3_logo"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.161"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_tkn3_name"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@mipmap/img_tkn3_round"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

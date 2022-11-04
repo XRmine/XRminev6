@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:theme="@style/ThemeOverlay.Xrminev6.FullscreenContainer"
+    tools:context=".FullscreenActivity" >
+
+    <ImageView
+        android:id="@+id/img_xrmine_title"
+        android:layout_width="412dp"
+        android:layout_height="121dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/img_xrmine_title_foreground"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/txt_mission"
+        android:layout_width="338dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/providing_a_new_method_of_distribution_in_order_to_increase_the_accessibility_of_the_xrp_ledger"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/img_xrmine_title"
+        app:layout_constraintStart_toStartOf="@+id/img_xrmine_title"
+        app:layout_constraintTop_toBottomOf="@+id/img_xrmine_title"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/txt_info"
+        android:layout_width="310dp"
+        android:layout_height="74dp"
+        android:text="@string/here_is_a_demo_version_of_our_application_to_give_you_an_overview_of_what_we_are_aiming_to_build"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/txt_mission"
+        app:layout_constraintStart_toStartOf="@+id/txt_mission"
+        app:layout_constraintTop_toBottomOf="@+id/img_xrmine"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_signin"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/sign_in"
+        app:layout_constraintStart_toStartOf="@+id/txt_info"
+        app:layout_constraintTop_toBottomOf="@+id/txt_info" />
+
+    <Button
+        android:id="@+id/btn_website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/xrmine_io"
+        app:layout_constraintEnd_toEndOf="@+id/txt_info"
+        app:layout_constraintTop_toBottomOf="@+id/txt_info"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <ImageView
+        android:id="@+id/img_xrmine"
+        android:layout_width="412dp"
+        android:layout_height="282dp"
+        android:contentDescription="@string/xrmine_io"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mission"
+        app:srcCompat="@mipmap/img_xrmine" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
